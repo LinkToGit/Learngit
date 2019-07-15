@@ -1,0 +1,27 @@
+								提交项目工程代码到git中心。
+1.第一步：在git上新建项目工程
+2.第二步：进入git命令窗口，进入本地一个空文件夹下运行一下命令：
+	git clone http://git.code.oa.com/v_fcyu/DataPlatform_helpers_test.git
+	cd DataPlatform_helpers_test
+	ls -al
+3.第三步：将需要提交到git上的工程文件夹复制到DataPlatform_helpers_test这个目录下
+4.第四步：在git命令窗口进入DataPlatform_helpers_test这个目录，执行以下命令：
+	git add src/
+	git commit -m "说明"
+5.第五步：运行以下命令，进行master的提交
+	git push -u origin master
+
+说明：
+	以后再要提交代码到git就只需要运行以下三条命令就行：
+	git add files/dir
+	git commit -m "说明"
+	git push -u origin master
+
+注：
+$git config --global core.autocrlf true
+
+    core.autocrlf是git中负责处理line endings的变量，可以设置三个值--true,inout,false
+
+    设置为true，添加文件到git仓库时，git将其视为文本文件。他将把crlf变成lf
+    设置为false时，line-endings将不做转换操作。文本文件保持原来的样子
+    设置为input时，添加文件git仓库石，git把crlf编程lf。当有人Check代码时还是lf方式。因此在window操作系统下，不要使用这个设置
