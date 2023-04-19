@@ -1,21 +1,25 @@
 								提交项目工程代码到git中心。
+使用变更说明：https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port
+0.配置环境：https://blog.csdn.net/qq_33957603/article/details/116670073
+	
 1.第一步：在git上新建项目工程
 2.第二步：进入git命令窗口，进入本地一个空文件夹下运行一下命令：
-	git clone http://git.code.oa.com/v_fcyu/DataPlatform_helpers_test.git
-	cd DataPlatform_helpers_test
+	git clone ssh://git@ssh.github.com:443/YOUR-USERNAME/YOUR-REPOSITORY.git
+	eg: git clone ssh://git@ssh.github.com:443/LinkToGit/k8s_learn.git
+	cd k8s_learn
 	ls -al
 3.第三步：将需要提交到git上的工程文件夹复制到DataPlatform_helpers_test这个目录下
 4.第四步：在git命令窗口进入DataPlatform_helpers_test这个目录，执行以下命令：
 	git add src/
 	git commit -m "说明"
-5.第五步：运行以下命令，进行master的提交
-	git push -u origin master
+5.第五步：运行以下命令，进行main的提交
+	git push -u origin main
 
 说明：
 	以后再要提交代码到git就只需要运行以下三条命令就行：
 	git add files/dir
 	git commit -m "说明"
-	git push -u origin master
+	git push -u origin main
 
 注：
 $git config --global core.autocrlf true
